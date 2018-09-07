@@ -7,30 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF_203000441758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FR_402627162656 /* Assets.xcassets */; };
-		BF_413462879555 = {isa = PBXBuildFile; fileRef = FR_533658815168 /* AnimationDemo.app */; };
+		BF_157880468675 /* UISpringTimingParameters+DesignParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_962458061799 /* UISpringTimingParameters+DesignParams.swift */; };
+		BF_187972208036 /* ClosedRange+Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_322568831337 /* ClosedRange+Clamp.swift */; };
 		BF_448406370436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_226171678907 /* AppDelegate.swift */; };
-		BF_793341608767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = VG_397526076769 /* LaunchScreen.storyboard */; };
+		BF_488163645397 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_446267315962 /* ExampleViewController.swift */; };
+		BF_582237445256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FR_553369716727 /* Assets.xcassets */; };
+		BF_603035605011 /* ExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FR_561796970968 /* ExampleViewController.xib */; };
+		BF_604445551782 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = VG_396875145740 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FR_226171678907 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FR_397526076769 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FR_402627162656 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FR_322568831337 /* ClosedRange+Clamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClosedRange+Clamp.swift"; sourceTree = "<group>"; };
+		FR_396875145740 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FR_446267315962 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		FR_533658815168 /* AnimationDemo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = AnimationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_553369716727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FR_561796970968 /* ExampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleViewController.xib; sourceTree = "<group>"; };
 		FR_823388758189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FR_962458061799 /* UISpringTimingParameters+DesignParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISpringTimingParameters+DesignParams.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		G_3356410864034 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FR_446267315962 /* ExampleViewController.swift */,
+				FR_561796970968 /* ExampleViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		G_4621726112770 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FR_322568831337 /* ClosedRange+Clamp.swift */,
+				FR_962458061799 /* UISpringTimingParameters+DesignParams.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		G_5336588151686 /* AnimationDemo */ = {
 			isa = PBXGroup;
 			children = (
 				FR_226171678907 /* AppDelegate.swift */,
-				FR_402627162656 /* Assets.xcassets */,
 				FR_823388758189 /* Info.plist */,
-				VG_397526076769 /* LaunchScreen.storyboard */,
+				G_6841239554709 /* Assets */,
+				G_3356410864034 /* Controller */,
+				G_4621726112770 /* Helper */,
 			);
 			path = AnimationDemo;
+			sourceTree = "<group>";
+		};
+		G_6841239554709 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FR_553369716727 /* Assets.xcassets */,
+				VG_396875145740 /* LaunchScreen.storyboard */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		G_8448771205358 = {
@@ -97,8 +132,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF_203000441758 /* Assets.xcassets in Resources */,
-				BF_793341608767 /* LaunchScreen.storyboard in Resources */,
+				BF_582237445256 /* Assets.xcassets in Resources */,
+				BF_603035605011 /* ExampleViewController.xib in Resources */,
+				BF_604445551782 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,16 +146,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF_448406370436 /* AppDelegate.swift in Sources */,
+				BF_187972208036 /* ClosedRange+Clamp.swift in Sources */,
+				BF_488163645397 /* ExampleViewController.swift in Sources */,
+				BF_157880468675 /* UISpringTimingParameters+DesignParams.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		VG_397526076769 /* LaunchScreen.storyboard */ = {
+		VG_396875145740 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FR_397526076769 /* Base */,
+				FR_396875145740 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

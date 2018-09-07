@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExampleViewController" customModule="AnimationDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="dropAreaView" destination="fto-pX-tJ1" id="MK9-kT-Ack"/>
+                <outlet property="orangeView" destination="Reb-m3-KNh" id="NEJ-xa-Vyh"/>
+                <outlet property="slider" destination="A9C-4E-S4j" id="eOz-cE-c6T"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drop-area" translatesAutoresizingMaskIntoConstraints="NO" id="fto-pX-tJ1">
+                    <rect key="frame" x="132.5" y="445.5" width="110" height="110"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Reb-m3-KNh">
+                    <rect key="frame" x="142.5" y="122" width="90" height="90"/>
+                    <color key="backgroundColor" red="1" green="0.53801538709999996" blue="0.3495836745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="Fcf-jH-s32"/>
+                        <constraint firstAttribute="width" constant="90" id="WXb-CT-iol"/>
+                    </constraints>
+                </view>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="A9C-4E-S4j">
+                    <rect key="frame" x="13" y="622" width="349" height="31"/>
+                    <connections>
+                        <action selector="handleSliderChange" destination="-1" eventType="valueChanged" id="qgr-Ht-gmr"/>
+                    </connections>
+                </slider>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYJ-PP-FwQ">
+                    <rect key="frame" x="321" y="35" width="39" height="30"/>
+                    <state key="normal" title="Reset"/>
+                    <connections>
+                        <action selector="handleReset:" destination="-1" eventType="touchUpInside" id="gW1-M6-XKc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="Reb-m3-KNh" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.5" id="DvV-5y-6ue"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oYJ-PP-FwQ" secondAttribute="trailing" constant="15" id="NJF-IM-bYu"/>
+                <constraint firstItem="fto-pX-tJ1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Nr4-9V-d6C"/>
+                <constraint firstItem="Reb-m3-KNh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Vxc-ED-EVT"/>
+                <constraint firstItem="fto-pX-tJ1" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="1.5" id="W27-hM-Lir"/>
+                <constraint firstItem="A9C-4E-S4j" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="YKP-Jk-f4w"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="A9C-4E-S4j" secondAttribute="trailing" constant="15" id="h45-xz-raS"/>
+                <constraint firstItem="oYJ-PP-FwQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="iR2-wq-xlG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="A9C-4E-S4j" secondAttribute="bottom" constant="15" id="tcU-Bl-wiG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="drop-area" width="110" height="110"/>
+    </resources>
+</document>
