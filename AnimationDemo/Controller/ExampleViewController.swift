@@ -7,17 +7,17 @@ class DropToTargetBehaviour {
 
     let animator = UIViewPropertyAnimator(duration: 2.0, curve: .linear)
 
-    var dragRange : ClosedRange<CGFloat> = 0...0
+    var dragRange : ClosedRange<CGFloat> = 0 ... 0
 
     init(dragView: UIView, dropAreaView: UIView) {
         self.dragView = dragView
         self.dropAreaView = dropAreaView
-        self.dragRange = 0...(self.dropAreaView.center.y - self.dragView.center.y)
+        self.dragRange = 0 ... (self.dropAreaView.center.y - self.dragView.center.y)
 
         self.dragView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.handlePan(_:))))
 
-        animator.pausesOnCompletion = true
-        animator.addAnimations {
+        self.animator.pausesOnCompletion = true
+        self.animator.addAnimations {
             UIView.animateKeyframes(withDuration: 0, delay: 0, animations: {
                 UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.5, animations: {
                     self.dragView.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
@@ -42,8 +42,8 @@ class DropToTargetBehaviour {
         self.dropAreaHighlighted = complete
 
         if recognizer.state == .ended {
-            animator.isReversed = !complete
-            animator.startAnimation()
+            self.animator.isReversed = !complete
+            self.animator.startAnimation()
             self.dropAreaHighlighted = false
         }
 
@@ -60,7 +60,6 @@ class DropToTargetBehaviour {
             self.dropAreaHighlightAnimator.startAnimation()
         }
     }
-
 
     deinit {
         animator.stopAnimation(true)
@@ -86,7 +85,7 @@ class ExampleViewController: UIViewController {
 
     @IBAction func handleSliderChange() {
         self.behaviour.animator.isReversed = false
-        self.behaviour.animator.fractionComplete = CGFloat(slider.value)
+        self.behaviour.animator.fractionComplete = CGFloat(self.slider.value)
     }
 
     @IBAction func handleReset(_: Any) {
